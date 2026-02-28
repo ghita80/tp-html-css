@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire complet - Projet Étudiant</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='90' font-size='90'>🦋</text></svg>">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🌸 Mon Projet HTML/CSS 🌸</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="formulaire.html" class="active">Formulaire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=300" alt="Formulaire" class="hero-image">
+            <h2>📝 Formulaire complet</h2>
+            <p>Tous les éléments requis pour les TP PHP</p>
+        </section>
+
+        <section class="form-container">
+            <form action="confirmation.html" method="get">
+                <!-- ===== INFORMATIONS PERSONNELLES ===== -->
+                <h3 class="form-section-title">👤 Informations personnelles</h3>
+                
+                <!-- 1. Champ texte (nom) -->
+                <div class="form-group">
+                    <label for="nom">Nom complet :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex: Dupont" required>
+                </div>
+
+                <!-- 2. Champ email -->
+                <div class="form-group">
+                    <label for="email">Adresse email :</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+                </div>
+
+                <!-- 3. Champ numérique (âge) -->
+                <div class="form-group">
+                    <label for="age">Âge :</label>
+                    <input type="number" id="age" name="age" min="1" max="120" placeholder="18" required>
+                </div>
+
+                <!-- Téléphone (optionnel) -->
+                <div class="form-group">
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+                </div>
+
+                <!-- ===== LOCALISATION ===== -->
+                <h3 class="form-section-title">📍 Localisation</h3>
+
+                <!-- 4. Liste déroulante (select) -->
+                <div class="form-group">
+                    <label for="pays">Pays de résidence :</label>
+                    <select id="pays" name="pays" required>
+                        <option value="">-- Choisissez un pays --</option>
+                        <option value="france">France</option>
+                        <option value="belgique">Belgique</option>
+                        <option value="suisse">Suisse</option>
+                        <option value="canada">Canada</option>
+                        <option value="maroc">Maroc</option>
+                    </select>
+                </div>
+
+                <!-- Ville (optionnel) -->
+                <div class="form-group">
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
+                </div>
+
+                <!-- ===== PRÉFÉRENCES ===== -->
+                <h3 class="form-section-title">⚡ Préférences</h3>
+
+                <!-- 5. Groupe radio -->
+                <div class="form-group">
+                    <label>Genre :</label>
+                    <div class="radio-group">
+                        <input type="radio" id="homme" name="genre" value="homme" required>
+                        <label for="homme">Homme</label>
+                        
+                        <input type="radio" id="femme" name="genre" value="femme">
+                        <label for="femme">Femme</label>
+                        
+                        <input type="radio" id="autre" name="genre" value="autre">
+                        <label for="autre">Autre</label>
+                    </div>
+                </div>
+
+                <!-- Langues parlées (checkboxes) -->
+                <div class="form-group">
+                    <label>Langues parlées :</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="francais" name="langues" value="francais">
+                        <label for="francais">Français</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="anglais" name="langues" value="anglais">
+                        <label for="anglais">Anglais</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="espagnol" name="langues" value="espagnol">
+                        <label for="espagnol">Espagnol</label>
+                    </div>
+                </div>
+
+                <!-- 6. Case checkbox (conditions) -->
+                <div class="form-group">
+                    <div class="checkbox-group condition">
+                        <input type="checkbox" id="accept" name="accept" required>
+                        <label for="accept">J'accepte les conditions d'utilisation</label>
+                    </div>
+                </div>
+
+                <!-- ===== MESSAGE ===== -->
+                <h3 class="form-section-title">💬 Message</h3>
+
+                <!-- 7. Zone textarea -->
+                <div class="form-group">
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..."></textarea>
+                </div>
+
+                <!-- 8. Bouton submit -->
+                <div class="form-actions">
+                    <button type="submit" class="btn">Envoyer le formulaire</button>
+                    <button type="reset" class="btn-reset">Effacer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projet étudiant - 2026 - Tous droits réservés 🌸</p>
+    </footer>
+</body>
+</html>
