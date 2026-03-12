@@ -14,6 +14,10 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
+                <li><a href="eau.php">Eau</a></li>
+                <li><a href="multi.php">Multi (4)</a></li>
+                <li><a href="multis.php">Multis</a></li>
+                <li><a href="mois.php">Mois</a></li>
                 <li><a href="formulaire.html" class="active">Formulaire</a></li>
             </ul>
         </nav>
@@ -31,25 +35,21 @@
                 <!-- ===== INFORMATIONS PERSONNELLES ===== -->
                 <h3 class="form-section-title">👤 Informations personnelles</h3>
                 
-                <!-- 1. Champ texte (nom) -->
                 <div class="form-group">
                     <label for="nom">Nom complet :</label>
                     <input type="text" id="nom" name="nom" placeholder="Ex: Dupont" required>
                 </div>
 
-                <!-- 2. Champ email -->
                 <div class="form-group">
                     <label for="email">Adresse email :</label>
                     <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
                 </div>
 
-                <!-- 3. Champ numérique (âge) -->
                 <div class="form-group">
                     <label for="age">Âge :</label>
                     <input type="number" id="age" name="age" min="1" max="120" placeholder="18" required>
                 </div>
 
-                <!-- Téléphone (optionnel) -->
                 <div class="form-group">
                     <label for="telephone">Téléphone :</label>
                     <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
@@ -58,7 +58,6 @@
                 <!-- ===== LOCALISATION ===== -->
                 <h3 class="form-section-title">📍 Localisation</h3>
 
-                <!-- 4. Liste déroulante (select) -->
                 <div class="form-group">
                     <label for="pays">Pays de résidence :</label>
                     <select id="pays" name="pays" required>
@@ -71,7 +70,6 @@
                     </select>
                 </div>
 
-                <!-- Ville (optionnel) -->
                 <div class="form-group">
                     <label for="ville">Ville :</label>
                     <input type="text" id="ville" name="ville" placeholder="Ex: Paris">
@@ -80,41 +78,44 @@
                 <!-- ===== PRÉFÉRENCES ===== -->
                 <h3 class="form-section-title">⚡ Préférences</h3>
 
-                <!-- 5. Groupe radio -->
-                <div class="form-group">
+                <div class="form-group radio-group">
                     <label>Genre :</label>
-                    <div class="radio-group">
-                        <input type="radio" id="homme" name="genre" value="homme" required>
-                        <label for="homme">Homme</label>
-                        
-                        <input type="radio" id="femme" name="genre" value="femme">
-                        <label for="femme">Femme</label>
-                        
-                        <input type="radio" id="autre" name="genre" value="autre">
-                        <label for="autre">Autre</label>
+                    <div class="radio-options">
+                        <div class="radio-option">
+                            <input type="radio" id="homme" name="genre" value="homme" required>
+                            <label for="homme">Homme</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="femme" name="genre" value="femme">
+                            <label for="femme">Femme</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="autre" name="genre" value="autre">
+                            <label for="autre">Autre</label>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Langues parlées (checkboxes) -->
-                <div class="form-group">
+                <div class="form-group checkbox-group">
                     <label>Langues parlées :</label>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="francais" name="langues" value="francais">
-                        <label for="francais">Français</label>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="anglais" name="langues" value="anglais">
-                        <label for="anglais">Anglais</label>
-                    </div>
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="espagnol" name="langues" value="espagnol">
-                        <label for="espagnol">Espagnol</label>
+                    <div class="checkbox-options">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="francais" name="langues[]" value="francais">
+                            <label for="francais">Français</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="anglais" name="langues[]" value="anglais">
+                            <label for="anglais">Anglais</label>
+                        </div>
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="espagnol" name="langues[]" value="espagnol">
+                            <label for="espagnol">Espagnol</label>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 6. Case checkbox (conditions) -->
-                <div class="form-group">
-                    <div class="checkbox-group condition">
+                <div class="form-group condition-group">
+                    <div class="condition-option">
                         <input type="checkbox" id="accept" name="accept" required>
                         <label for="accept">J'accepte les conditions d'utilisation</label>
                     </div>
@@ -123,16 +124,14 @@
                 <!-- ===== MESSAGE ===== -->
                 <h3 class="form-section-title">💬 Message</h3>
 
-                <!-- 7. Zone textarea -->
                 <div class="form-group">
                     <label for="message">Votre message :</label>
                     <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..."></textarea>
                 </div>
 
-                <!-- 8. Bouton submit -->
                 <div class="form-actions">
                     <button type="submit" class="btn">Envoyer le formulaire</button>
-                    <button type="reset" class="btn-reset">Effacer</button>
+                    <button type="reset" class="btn btn-reset">Effacer</button>
                 </div>
             </form>
         </section>
